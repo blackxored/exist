@@ -1,0 +1,31 @@
+{
+    "count": 11,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "attribute": "steps",
+            "date": "2020-04-29",
+            "overall": 4174.0,
+            "monday": 4057.0,
+            "tuesday": 6614.0,
+            "wednesday": 4001.0,
+            "thursday": 3923.0,
+            "friday": 4528.0,
+            "saturday": 3649.0,
+            "sunday": 3904.0
+        },
+        {
+            "attribute": "steps",
+            "date": "2020-03-30",
+            "overall": 4062.0,
+            "monday": 4057.0,
+            "tuesday": 6618.0,
+            "wednesday": 3610.0,
+            "thursday": 3923.0,
+            "friday": 4063.0,
+            "saturday": 3636.0,
+            "sunday": 3904.0
+        }
+    ]
+}

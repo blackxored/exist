@@ -3,3 +3,4 @@ README.md
 doc/
 pkg/
 vendor/cache/*.gem
+coverage/

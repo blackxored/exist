@@ -1,0 +1,26 @@
+[
+    {
+        "attribute": "steps",
+        "date": "2020-04-29",
+        "overall": 4174.0,
+        "monday": 4057.0,
+        "tuesday": 6614.0,
+        "wednesday": 4001.0,
+        "thursday": 3923.0,
+        "friday": 4528.0,
+        "saturday": 3649.0,
+        "sunday": 3904.0
+    },
+    {
+        "attribute": "floors",
+        "date": "2020-04-29",
+        "overall": 13.0,
+        "monday": 13.0,
+        "tuesday": 16.0,
+        "wednesday": 14.0,
+        "thursday": 12.0,
+        "friday": 14.0,
+        "saturday": 13.0,
+        "sunday": 12.0
+    }
+]

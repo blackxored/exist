@@ -1,0 +1,29 @@
+{
+    "count": 220,
+    "next": "https://exist.io/api/1/users/josh/insights/attribute/sleep/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "created": "2015-05-09T01:00:02Z",
+            "target_date": "2015-05-08",
+            "html": "<div class=\"secondary\">Friday night: Shortest sleep for 3 days</div>...",
+            "value": "303",
+            "value2": "3 days",
+            "comment": null,
+            "type": {
+                "name": "sleep_worst_since_x",
+                "period": 1,
+                "priority": 2,
+                "attribute": {
+                    "name": "sleep",
+                    "label": "Time asleep",
+                    "group": {
+                        "name": "sleep",
+                        "priority": 3
+                    },
+                    "priority": 2
+                }
+            }
+        }
+    ]
+}

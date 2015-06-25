@@ -1,0 +1,41 @@
+{
+    "id": 1,
+    "username": "josh",
+    "first_name": "Josh",
+    "last_name": "Sharp",
+    "bio": "I made this thing you're using.",
+    "url": "http://hellocode.co/",
+    "avatar": "https://exist.io/static/media/avatars/josh_2.png",
+    "timezone": "Australia/Melbourne",
+    "local_time": "2020-07-31T22:33:49.359+10:00",
+    "private": false,
+    "imperial_units": false,
+    "attributes": [
+        {
+            "group": "steps",
+            "priority": 1,
+            "items": [
+                {
+                    "attribute": "steps",
+                    "label": "Steps",
+                    "value": 258,
+                    "service": "Fitbit",
+                    "priority": 1,
+                    "private": false,
+                    "value_type": 0,
+                    "value_type_description": "Integer"
+                },
+                {
+                    "attribute": "floors",
+                    "label": "Floors",
+                    "value": 2,
+                    "service": "Fitbit",
+                    "priority": 2,
+                    "private": false,
+                    "value_type": 0,
+                    "value_type_description": "Integer"
+                }
+            ]
+        }
+    ]
+}

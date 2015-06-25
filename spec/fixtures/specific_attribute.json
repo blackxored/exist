@@ -1,0 +1,29 @@
+{
+    "count": 655,
+    "next": "https://exist.io/api/1/users/josh/attributes/steps/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "value": 3783,
+            "date": "2015-05-08"
+        }, {
+            "value": 6177,
+            "date": "2015-05-07"
+        }, {
+            "value": 7811,
+            "date": "2015-05-06"
+        }, {
+            "value": 6632,
+            "date": "2015-05-05"
+        }, {
+            "value": 6014,
+            "date": "2015-05-04"
+        }, {
+            "value": 4376,
+            "date": "2015-05-03"
+        }, {
+            "value": 8671,
+            "date": "2015-05-02"
+        }
+    ]
+}

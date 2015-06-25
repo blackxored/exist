@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "username": "josh",
+    "first_name": "Josh",
+    "last_name": "Sharp",
+    "bio": "I made this thing you're using.",
+    "url": "http://hellocode.co/",
+    "avatar": "https://exist.io/static/media/avatars/josh_2.png",
+    "timezone": "Australia/Melbourne",
+    "local_time": "2020-05-08T20:56:20.417+10:00",
+    "private": false,
+    "imperial_units": false
+}

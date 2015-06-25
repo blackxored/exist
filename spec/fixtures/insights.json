@@ -1,0 +1,51 @@
+{
+    "count": 740,
+    "next": "https://exist.io/api/1/users/josh/insights/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "created": "2015-05-09T01:00:02Z",
+            "target_date": "2015-05-08",
+            "html": "<div class=\"secondary\">Friday night: Shortest sleep for 3 days</div>...",
+            "value": "303",
+            "value2": "3 days",
+            "comment": null,
+            "type": {
+                "name": "sleep_worst_since_x",
+                "period": 1,
+                "priority": 2,
+                "attribute": {
+                    "name": "sleep",
+                    "label": "Time asleep",
+                    "group": {
+                        "name": "sleep",
+                        "priority": 3
+                    },
+                    "priority": 2
+                }
+            }
+        },
+        {
+            "created": "2015-05-08T21:00:03Z",
+            "target_date": null,
+            "html": "<div class=\"number\">09:38</div>...",
+            "value": "578",
+            "value2": "65 min earlier",
+            "comment": null,
+            "type": {
+                "name": "sleep_end_average_week",
+                "period": 7,
+                "priority": 3,
+                "attribute": {
+                    "name": "sleep_end",
+                    "label": "Wake time",
+                    "group": {
+                        "name": "sleep",
+                        "priority": 3
+                    },
+                    "priority": 4
+                }
+            }
+        }
+    ]
+}
