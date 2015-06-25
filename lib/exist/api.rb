@@ -35,26 +35,20 @@ module Exist
 
     # Date format is YYYY-mm-dd
     def attribute(attribute, limit: 31, page: 1, oldest_date: nil, newest_date: nil)
-      response = client.get(
-        "users/$self/attributes/#{attribute}/",
-        page: page, limit: limit, date_min: oldest_date, date_max: newest_date
-      ).body
+      response = paginated_user_resource(
+        "attributes/#{attribute}", page, limit, oldest_date, newest_date
+      )
       AttributeList.new(
-        attributes: response['results'],
-        total:      response['count'],
+        attributes: response['results'], total: response['count']
       )
     end
 
     def insights(limit: 31, page: 1, oldest_date: nil, newest_date: nil)
-      response = client.get(
-        "users/$self/insights/",
-        page: page, limit: limit, date_min: oldest_date, date_max: newest_date
+      response = paginated_user_resource(
+        'insights', page, limit, oldest_date, newest_date
       )
 
-      InsightList.new(
-        insights: response.body['results'],
-        total: response.body['count'],
-      )
+      InsightList.new(insights: response['results'], total: response['count'])
     end
 
     def insights_for_attribute(attribute, limit: 31, page: 1, oldest_date: nil, newest_date: nil)
@@ -81,9 +75,8 @@ module Exist
       AverageList.new(averages: response['results'], total: response['count'])
     end
 
-    def correlations(username, attribute,
-                     limit: 31, page: 1, oldest_date: nil, newest_date: nil,
-                     latest_only: false)
+    def correlations(username, attribute, limit: 31, page: 1, oldest_date: nil,
+                     newest_date: nil, latest_only: false)
 
       params = { page: page, limit: limit }
 
