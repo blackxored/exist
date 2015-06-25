@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.name          = "exist"
   gem.version       = Exist::VERSION
   gem.summary       = "Ruby client for the Exist.IO API"
-  gem.description   = gem.summary
+  gem.description   = %q{Ruby client for the Exist.IO life-tracking/correlation platform API}
   gem.license       = "MIT"
   gem.authors       = ["Adrian Perez"]
   gem.email         = "adrianperez.deb@gmail.com"
@@ -29,5 +29,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rubocop', '>= 0.32.1 '
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
   gem.add_development_dependency 'yard', '~> 0.8'
-  gem.add_development_dependency 'pry'
+  gem.add_development_dependency 'pry', '>= 0.10.1'
 end
