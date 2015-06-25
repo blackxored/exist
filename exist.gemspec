@@ -17,16 +17,16 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'faraday'
-  gem.add_dependency 'faraday_middleware'
-  gem.add_dependency 'hashie'
+  gem.add_dependency 'faraday', '~> 0.9'
+  gem.add_dependency 'faraday_middleware', '~> 0.9'
+  gem.add_dependency 'hashie', '~> 3.4'
   gem.add_development_dependency 'bundler', '~> 1.0'
   gem.add_development_dependency 'rake', '~> 0.8'
   gem.add_development_dependency 'rspec', '~> 2.4'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'coveralls'
-  gem.add_development_dependency 'rubocop'
+  gem.add_development_dependency 'webmock', '>= 1.21.0'
+  gem.add_development_dependency 'simplecov', '>= 0.10.0'
+  gem.add_development_dependency 'coveralls', '>= 0.8.2'
+  gem.add_development_dependency 'rubocop', '>= 0.32.1 '
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
   gem.add_development_dependency 'yard', '~> 0.8'
   gem.add_development_dependency 'pry'
