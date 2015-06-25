@@ -21,7 +21,7 @@ module Exist
     end
 
     def me
-      User.new(client.get('users/$self/').body)
+      User.new(user_resource(nil))
     end
 
     def overview(username = '$self')
@@ -29,8 +29,7 @@ module Exist
     end
 
     def attributes(limit: 31)
-      response = client.get('users/$self/attributes/', limit: limit).body
-
+      response = user_resource('attributes', limit: limit)
       AttributeList.new(attributes: response)
     end
 
@@ -59,26 +58,25 @@ module Exist
     end
 
     def insights_for_attribute(attribute, limit: 31, page: 1, oldest_date: nil, newest_date: nil)
-      response = client.get(
-        "users/$self/insights/attribute/#{attribute}/",
-        page: page, limit: limit, date_min: oldest_date, date_max: newest_date
+      response = paginated_user_resource(
+        "insights/attribute/#{attribute}",
+        page, limit, oldest_date, newest_date
       )
       InsightList.new(
-        insights: response.body['results'],
-        total:    response.body['count'],
+        insights: response['results'],
+        total:    response['count'],
       )
     end
 
     def averages
-      response = client.get('users/$self/averages/')
-      AverageList.new(averages: response.body)
+      response = user_resource('averages')
+      AverageList.new(averages: response)
     end
 
     def average_for_attribute(attribute, limit: 31, page: 1, oldest_date: nil, newest_date: nil)
-      response = client.get(
-        "users/$self/averages/attribute/#{attribute}/",
-        page: page, limit: limit, date_min: oldest_date, date_max: newest_date
-      ).body
+      response = paginated_user_resource(
+        "averages/attribute/#{attribute}", page, limit, oldest_date, newest_date
+      )
 
       AverageList.new(averages: response['results'], total: response['count'])
     end
@@ -88,6 +86,7 @@ module Exist
                      latest_only: false)
 
       params = { page: page, limit: limit }
+
       if !latest_only
         params.merge!(date_min: oldest_date, date_max: newest_date)
       else
@@ -113,6 +112,20 @@ module Exist
         conn.response :json, content_type: /\bjson$/
         conn.adapter Faraday.default_adapter
       end
+    end
+
+    def user_resource(resource, params = {})
+      url = base_url + "users/$self/#{resource}"
+      url += "/" unless url.end_with?('/')
+
+      client.get(url, params).body
+    end
+
+    def paginated_user_resource(resource, page, limit, newest_date, oldest_date)
+      user_resource(resource, {
+        page: page, limit: limit, date_min: oldest_date,
+        date_max: newest_date
+      })
     end
 
     def base_url
