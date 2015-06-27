@@ -1,4 +1,4 @@
-# Exist.IO API Ruby Client
+# Exist API Ruby Client
 
 [![Gem Version](https://badge.fury.io/rb/exist.png)](http://badge.fury.io/rb/exist) [![Build Status](https://travis-ci.org/blackxored/exist.png)](https://travis-ci.org/blackxored/exist) [![Coverage Status](https://coveralls.io/repos/blackxored/exist/badge.png?branch=master)](https://coveralls.io/r/blackxored/exist) [![Dependency Status](https://gemnasium.com/blackxored/exist.png)](https://gemnasium.com/blackxored/exist) [![Code Climate](https://codeclimate.com/github/blackxored/exist.png)](https://codeclimate.com/github/blackxored/exist)
 

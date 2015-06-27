@@ -5,8 +5,8 @@ require File.expand_path('../lib/exist/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "exist"
   gem.version       = Exist::VERSION
-  gem.summary       = "Ruby client for the Exist.IO API"
-  gem.description   = %q{Ruby client for the Exist.IO life-tracking/correlation platform API}
+  gem.summary       = "Ruby client for the Exist API"
+  gem.description   = %q{Ruby client for the Exist life-tracking/correlation platform API (http://exist.io)}
   gem.license       = "MIT"
   gem.authors       = ["Adrian Perez"]
   gem.email         = "adrianperez.deb@gmail.com"
