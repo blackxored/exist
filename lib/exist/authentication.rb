@@ -6,7 +6,7 @@ module Exist
 
     def login!
       resp = client.post(
-        'auth/simple-token',
+        'auth/simple-token/',
         username: @options[:username],
         password: @options[:password]
       )
