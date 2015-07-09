@@ -24,7 +24,7 @@ RSpec.describe Exist::API do
     end
 
     it 'negotiates a token if username and password are provided' do
-      stub_request(:post, api_root + '/auth/simple-token').to_return(
+      stub_request(:post, api_root + '/auth/simple-token/').to_return(
         body:    { token: token                        }.to_json,
         headers: { 'Content-Type' => 'application/json'}
       )
@@ -34,7 +34,7 @@ RSpec.describe Exist::API do
     end
 
     it 'raises an error if fails to login' do
-      stub_request(:post, api_root + '/auth/simple-token').to_return(
+      stub_request(:post, api_root + '/auth/simple-token/').to_return(
         status: 401
       )
       expect {
